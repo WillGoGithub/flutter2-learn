@@ -1,3 +1,6 @@
+# 筆記
+Flutter for Web 以目前 v2 來說還是不太成熟
+
 # flutter2_learn
 
 A new Flutter project.
