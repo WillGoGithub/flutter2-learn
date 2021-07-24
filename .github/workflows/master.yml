@@ -1,7 +1,7 @@
 name: Build and Release Apps
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-deploy:
