@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter2_learn/Screens/Login/LoginScreen.dart';
 import 'package:flutter2_learn/Screens/Welcome/components/background.dart';
-import 'package:flutter2_learn/components/roundedButton.dart';
+import 'package:flutter2_learn/components/roundedIconButton.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
@@ -27,7 +27,7 @@ class Body extends StatelessWidget {
           SizedBox(
             height: size.height * 0.02,
           ),
-          RoundedButton(
+          RoundedIconButton(
             text: 'Login',
             textColor: Colors.white,
             btnColor: Colors.blue.shade400,
@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
               );
             },
           ),
-          RoundedButton(
+          RoundedIconButton(
             text: 'Registry',
             textColor: Colors.black,
             btnColor: Colors.blue.shade100,

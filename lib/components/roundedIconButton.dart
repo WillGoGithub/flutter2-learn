@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-class RoundedButton extends StatelessWidget {
+class RoundedIconButton extends StatelessWidget {
   final String text;
+  final IconData icon;
   final Color btnColor, textColor;
   final void Function()? pressed, longPressed;
-  const RoundedButton({
+  const RoundedIconButton({
     Key? key,
-    required this.text,
+    this.text = "",
+    required this.icon,
     this.btnColor = Colors.blue,
     this.textColor = Colors.white,
     this.pressed,
@@ -21,14 +23,21 @@ class RoundedButton extends StatelessWidget {
       width: size.width * 0.8,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(29),
-        child: TextButton(
+        child: TextButton.icon(
+          icon: Icon(
+            icon,
+            color: textColor,
+          ),
+          label: Text(
+            text,
+            style: TextStyle(color: textColor),
+          ),
           style: TextButton.styleFrom(
             padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
             backgroundColor: btnColor,
           ),
           onPressed: pressed,
           onLongPress: longPressed,
-          child: Text(text, style: TextStyle(color: textColor)),
         ),
       ),
     );

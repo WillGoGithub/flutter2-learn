@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter2_learn/components/textFieldContainer.dart';
 import 'package:flutter2_learn/constants.dart';
 
-class RoundedPasswordField extends StatelessWidget {
+class RoundedPasswordField extends StatefulWidget {
   final String hintText;
   final IconData icon;
   final ValueChanged<String> onChanged;
+
   const RoundedPasswordField({
     Key? key,
     required this.hintText,
@@ -14,19 +15,33 @@ class RoundedPasswordField extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _RoundedPasswordFieldState createState() => _RoundedPasswordFieldState();
+}
+
+class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
+  bool _isObscured = true;
+
+  void _toggleObscureText() {
+    setState(() {
+      _isObscured = !_isObscured;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextField(
-        obscureText: true,
+        obscureText: _isObscured,
         decoration: InputDecoration(
-            hintText: hintText,
-            icon: Icon(icon, color: COLOR_PRIMARY),
-            suffixIcon: Icon(
-              Icons.visibility,
+            hintText: widget.hintText,
+            icon: Icon(widget.icon, color: COLOR_PRIMARY),
+            suffixIcon: IconButton(
               color: COLOR_PRIMARY,
+              icon: Icon(Icons.visibility),
+              onPressed: _toggleObscureText,
             ),
             border: InputBorder.none),
-        onChanged: onChanged,
+        onChanged: widget.onChanged,
       ),
     );
   }
