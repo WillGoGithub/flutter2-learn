@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter2_learn/constants.dart';
 
 class Background extends StatelessWidget {
   final Widget child;
@@ -13,7 +14,7 @@ class Background extends StatelessWidget {
     return Container(
       height: size.height,
       width: double.infinity,
-      child: Stack(alignment: Alignment.center, children: <Widget>[
+      child: Stack(alignment: Alignment.center, children: [
         Positioned(
             top: -100,
             left: -120,
@@ -30,7 +31,7 @@ class Background extends StatelessWidget {
                       0.8,
                     ],
                     colors: [
-                      Colors.purple.shade100,
+                      COLOR_PRIMARY.shade100,
                       Colors.blue.shade50,
                     ],
                   )),
@@ -52,7 +53,7 @@ class Background extends StatelessWidget {
                     ],
                     colors: [
                       Colors.blue.shade50,
-                      Colors.purple.shade50,
+                      COLOR_PRIMARY.shade50,
                     ],
                   )),
             )),
@@ -73,7 +74,7 @@ class Background extends StatelessWidget {
                     ],
                     colors: [
                       Colors.blue.shade50,
-                      Colors.purple.shade50,
+                      COLOR_PRIMARY.shade50,
                     ],
                   )),
             )),

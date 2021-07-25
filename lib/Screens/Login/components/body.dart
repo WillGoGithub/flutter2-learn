@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter2_learn/Screens/Login/components/background.dart';
+import 'package:flutter2_learn/components/roundedInputField.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -8,9 +11,23 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-      width: double.infinity,
-      height: size.height,
-    );
+    return Background(
+        child: SingleChildScrollView(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Text(
+        'Login',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      SvgPicture.asset(
+        'assets/icons/login.svg',
+        height: size.height * 0.35,
+      ),
+      RoundedInputField(
+        hintText: 'Your Email',
+        icon: Icons.person,
+        onChanged: (String value) {},
+      )
+    ])));
   }
 }

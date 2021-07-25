@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter2_learn/Screens/Login/LoginScreen.dart';
 import 'package:flutter2_learn/Screens/Welcome/components/background.dart';
 import 'package:flutter2_learn/components/roundedButton.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -11,29 +12,35 @@ class Body extends StatelessWidget {
         child: SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
+        children: [
           Text(
-            "Welcome to OOO",
+            'Welcome to OOO',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           SizedBox(
             height: size.height * 0.03,
           ),
           SvgPicture.asset(
-            "assets/icons/chat.svg",
+            'assets/icons/chat.svg',
             height: size.height * 0.45,
           ),
           SizedBox(
             height: size.height * 0.02,
           ),
           RoundedButton(
-            text: "Login",
+            text: 'Login',
             textColor: Colors.white,
             btnColor: Colors.blue.shade400,
             icon: Icons.login_rounded,
+            pressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LoginScreen()),
+              );
+            },
           ),
           RoundedButton(
-            text: "Registry",
+            text: 'Registry',
             textColor: Colors.black,
             btnColor: Colors.blue.shade100,
             icon: Icons.add_circle_outline,
