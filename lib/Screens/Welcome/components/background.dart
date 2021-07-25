@@ -13,7 +13,7 @@ class Background extends StatelessWidget {
     return Container(
       height: size.height,
       width: double.infinity,
-      child: Stack(children: <Widget>[
+      child: Stack(alignment: Alignment.center, children: <Widget>[
         Positioned(
             top: -100,
             left: -120,
@@ -41,6 +41,27 @@ class Background extends StatelessWidget {
             child: Container(
               width: 100,
               height: 100,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    stops: [
+                      0.2,
+                      0.7,
+                    ],
+                    colors: [
+                      Colors.blue.shade50,
+                      Colors.purple.shade50,
+                    ],
+                  )),
+            )),
+        Positioned(
+            top: size.height * 0.6,
+            right: -60,
+            child: Container(
+              width: 120,
+              height: 120,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   gradient: LinearGradient(
