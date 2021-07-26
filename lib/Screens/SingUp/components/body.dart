@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'SignUp',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
