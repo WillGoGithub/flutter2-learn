@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter2_learn/Screens/Login/LoginScreen.dart';
+import 'package:flutter2_learn/Screens/SingUp/signUpScreen.dart';
 import 'package:flutter2_learn/Screens/Welcome/components/background.dart';
 import 'package:flutter2_learn/components/roundedIconButton.dart';
 import 'package:flutter_svg/svg.dart';
@@ -44,6 +45,12 @@ class Body extends StatelessWidget {
             textColor: Colors.black,
             btnColor: Colors.blue.shade100,
             icon: Icons.add_circle_outline,
+            pressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SignUpScreen()),
+              );
+            },
           )
         ],
       ),
