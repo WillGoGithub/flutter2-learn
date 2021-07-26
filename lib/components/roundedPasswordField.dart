@@ -9,8 +9,8 @@ class RoundedPasswordField extends StatefulWidget {
 
   const RoundedPasswordField({
     Key? key,
-    required this.hintText,
-    required this.icon,
+    this.hintText = 'Password',
+    this.icon = Icons.lock,
     required this.onChanged,
   }) : super(key: key);
 

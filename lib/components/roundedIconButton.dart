@@ -19,7 +19,7 @@ class RoundedIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       width: size.width * 0.8,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(29),
@@ -33,7 +33,7 @@ class RoundedIconButton extends StatelessWidget {
             style: TextStyle(color: textColor),
           ),
           style: TextButton.styleFrom(
-            padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+            padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
             backgroundColor: btnColor,
           ),
           onPressed: pressed,

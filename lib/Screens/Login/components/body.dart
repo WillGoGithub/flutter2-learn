@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter2_learn/Screens/Login/components/background.dart';
+import 'package:flutter2_learn/Screens/SingUp/signUpScreen.dart';
+import 'package:flutter2_learn/components/haveAnAccountTip.dart';
 import 'package:flutter2_learn/components/roundedButton.dart';
 import 'package:flutter2_learn/components/roundedInputField.dart';
 import 'package:flutter2_learn/components/roundedPasswordField.dart';
@@ -17,27 +19,33 @@ class Body extends StatelessWidget {
         child: SingleChildScrollView(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      Text(
-        'Login',
+      const Text(
+        'LOGIN',
         style: TextStyle(fontWeight: FontWeight.bold),
       ),
+      SizedBox(height: size.height * 0.03),
       SvgPicture.asset(
         'assets/icons/login.svg',
         height: size.height * 0.35,
       ),
+      SizedBox(height: size.height * 0.03),
       RoundedInputField(
         hintText: 'Your Email',
         icon: Icons.person,
         onChanged: (String value) {},
       ),
       RoundedPasswordField(
-        hintText: 'Password',
-        icon: Icons.lock,
         onChanged: (String value) {},
       ),
       RoundedButton(
         text: 'Login',
-      )
+        pressed: () {},
+      ),
+      SizedBox(height: size.height * 0.03),
+      HaveAnAccountTip(tap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+      })
     ])));
   }
 }
