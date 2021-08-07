@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter2_learn/utils/helpers/l10nHelper.dart';
 import 'package:flutter2_learn/constants.dart';
 
 class HaveAnAccountTip extends StatelessWidget {
@@ -22,7 +23,7 @@ class HaveAnAccountTip extends StatelessWidget {
         GestureDetector(
           onTap: tap,
           child: Text(
-            login ? "Sign Up" : "Sign ",
+            login ? L10n.of(context).signUp : L10n.of(context).login,
             style: TextStyle(color: COLOR_PRIMARY, fontWeight: FontWeight.bold),
           ),
         )
