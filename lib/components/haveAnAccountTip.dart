@@ -17,7 +17,9 @@ class HaveAnAccountTip extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          login ? "Don't have an Account ? " : "Already have an Account ? ",
+          login
+              ? L10n.of(context).doNotHaveAnAccount
+              : L10n.of(context).alreadyHaveAnAccount,
           style: TextStyle(color: COLOR_PRIMARY),
         ),
         GestureDetector(

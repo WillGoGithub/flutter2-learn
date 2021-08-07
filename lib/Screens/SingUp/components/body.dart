@@ -7,6 +7,7 @@ import 'package:flutter2_learn/components/haveAnAccountTip.dart';
 import 'package:flutter2_learn/components/roundedButton.dart';
 import 'package:flutter2_learn/components/roundedInputField.dart';
 import 'package:flutter2_learn/components/roundedPasswordField.dart';
+import 'package:flutter2_learn/utils/helpers/l10nHelper.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
@@ -20,8 +21,8 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'SignUp',
+            Text(
+              L10n.of(context).signUp,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(

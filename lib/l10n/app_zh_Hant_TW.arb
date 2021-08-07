@@ -1,7 +1,0 @@
-{
-  "@login": {
-    "signIn": "登入",
-    "signUp": "註冊"
-  },
-  "projectTitle": "Flutter 專案實驗室"
-}

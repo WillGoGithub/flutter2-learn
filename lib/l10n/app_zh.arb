@@ -1,5 +1,9 @@
 {
+  "alreadyHaveAnAccount": "已經擁有帳號？點此",
+  "doNotHaveAnAccount": "尚未創建帳號？點此",
+  "email": "電子郵件",
   "login": "登入",
+  "pleaseEnterYour": "請輸入您的{field}",
   "projectTitle": "Flutter 專案實驗室",
   "signUp": "註冊"
 }
