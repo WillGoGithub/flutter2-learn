@@ -33,12 +33,13 @@ class Body extends StatelessWidget {
               height: size.height * 0.35,
             ),
             RoundedInputField(
-                hintText: 'Your Email',
+                hintText:
+                    '${L10n.of(context).pleaseEnterYour}${L10n.of(context).email}',
                 icon: Icons.person,
                 onChanged: (value) {}),
             RoundedPasswordField(onChanged: (value) {}),
             RoundedButton(
-              text: 'SIGNUP',
+              text: L10n.of(context).signUp.toUpperCase(),
               pressed: () {},
             ),
             SizedBox(

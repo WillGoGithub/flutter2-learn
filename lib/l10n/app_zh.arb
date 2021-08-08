@@ -3,7 +3,11 @@
   "doNotHaveAnAccount": "尚未創建帳號？點此",
   "email": "電子郵件",
   "login": "登入",
-  "pleaseEnterYour": "請輸入您的{field}",
+  "or": "或",
+  "password": "密碼",
+  "pleaseEnterYour": "請輸入您的",
   "projectTitle": "Flutter 專案實驗室",
-  "signUp": "註冊"
+  "registry": "註冊",
+  "signUp": "註冊",
+  "welcomeTo": "歡迎使用 "
 }

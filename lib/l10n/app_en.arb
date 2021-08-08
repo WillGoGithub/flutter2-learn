@@ -1,16 +1,13 @@
 {
-  "@pleaseEnterYour": {
-    "description": "The input placeholder",
-    "placeholders": {
-      "field": "field"
-    },
-    "type": "text"
-  },
   "alreadyHaveAnAccount": "Already have an Account ? Click here to ",
   "doNotHaveAnAccount": "Don't have an Account ? Click here to ",
   "email": "Email",
   "login": "Login",
-  "pleaseEnterYour": "Please enter your {field}",
+  "or": "or",
+  "password": "Password",
+  "pleaseEnterYour": "Please enter your ",
   "projectTitle": "Flutter Project Lab",
-  "signUp": "Sign Up"
+  "registry": "registry",
+  "signUp": "Sign Up",
+  "welcomeTo": "Welcome to "
 }

@@ -3,6 +3,7 @@ import 'package:flutter2_learn/Screens/Login/LoginScreen.dart';
 import 'package:flutter2_learn/Screens/SingUp/signUpScreen.dart';
 import 'package:flutter2_learn/Screens/Welcome/components/background.dart';
 import 'package:flutter2_learn/components/roundedIconButton.dart';
+import 'package:flutter2_learn/utils/helpers/l10nHelper.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
@@ -14,8 +15,8 @@ class Body extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'Welcome to OOO',
+          Text(
+            '${L10n.of(context).welcomeTo}${L10n.of(context).projectTitle}',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -29,7 +30,7 @@ class Body extends StatelessWidget {
             height: size.height * 0.02,
           ),
           RoundedIconButton(
-            text: 'Login',
+            text: L10n.of(context).login,
             textColor: Colors.white,
             btnColor: Colors.blue.shade400,
             icon: Icons.login_rounded,
@@ -41,7 +42,7 @@ class Body extends StatelessWidget {
             },
           ),
           RoundedIconButton(
-            text: 'Registry',
+            text: L10n.of(context).registry,
             textColor: Colors.black,
             btnColor: Colors.blue.shade100,
             icon: Icons.add_circle_outline,

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter2_learn/components/textFieldContainer.dart';
 import 'package:flutter2_learn/constants.dart';
+import 'package:flutter2_learn/utils/helpers/l10nHelper.dart';
 
 class RoundedPasswordField extends StatefulWidget {
-  final String hintText;
+  final String? hintText;
   final IconData icon;
   final ValueChanged<String> onChanged;
 
   const RoundedPasswordField({
     Key? key,
-    this.hintText = 'Password',
+    this.hintText,
     this.icon = Icons.lock,
     required this.onChanged,
   }) : super(key: key);
@@ -33,7 +34,7 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
       child: TextField(
         obscureText: _isObscured,
         decoration: InputDecoration(
-            hintText: widget.hintText,
+            hintText: widget.hintText ?? L10n.of(context).password,
             icon: Icon(widget.icon, color: COLOR_PRIMARY),
             suffixIcon: IconButton(
               color: COLOR_PRIMARY,

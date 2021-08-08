@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter2_learn/constants.dart';
+import 'package:flutter2_learn/utils/helpers/l10nHelper.dart';
 
 class TextDivider extends StatelessWidget {
   const TextDivider({Key? key}) : super(key: key);
@@ -13,10 +14,10 @@ class TextDivider extends StatelessWidget {
       child: Row(
         children: [
           buildDivider(),
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Text(
-              'OR',
+              L10n.of(context).or,
               style:
                   TextStyle(color: COLOR_PRIMARY, fontWeight: FontWeight.w600),
             ),
